@@ -21,9 +21,13 @@ public class NumberIterator {
 	public void convertNumberToWords(int number) {
 		if(number < 0 || number > 2147483647) {
 			throw new IllegalArgumentException("Number must be within the range 0 to 2147483647");
+			
 		} else if (number == 0) {
 			System.out.println(" Zero");
+			
+		} else {
+			this.billions.iterate(new Thousand(number));
+			
 		}
-		this.billions.iterate(new Thousand(number));
 	}
 }
