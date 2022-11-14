@@ -17,7 +17,7 @@ public abstract class AbstractTicketCategory {
 	}
 	
 	public BigDecimal getTotalPrice() {
-		return this.price.add(this.tax);
+		return price.add(tax.multiply(price));
 	}
 	
 	public abstract BigDecimal setTicketPrice();

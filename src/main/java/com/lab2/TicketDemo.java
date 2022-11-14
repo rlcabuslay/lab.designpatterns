@@ -9,11 +9,11 @@ public class TicketDemo {
 	public static void main(String[] args) {
 		TicketCart ticketCart = new TicketCart();
 		
-		float tax = 10F;
+		float taxPercentage = 0.5F;
 		
-		TicketCategory childTicket = TicketFactory.instance().getCashDispenser(TicketEnum.CHILDREN, tax);
-		TicketCategory adultTicket = TicketFactory.instance().getCashDispenser(TicketEnum.ADULTS, tax);
-		TicketCategory seniorTicket = TicketFactory.instance().getCashDispenser(TicketEnum.SENIORS, tax);
+		TicketCategory childTicket = TicketFactory.instance().getCashDispenser(TicketEnum.CHILDREN, taxPercentage);
+		TicketCategory adultTicket = TicketFactory.instance().getCashDispenser(TicketEnum.ADULTS, taxPercentage);
+		TicketCategory seniorTicket = TicketFactory.instance().getCashDispenser(TicketEnum.SENIORS, taxPercentage);
 		
 		ticketCart.addTicket(childTicket);
 		ticketCart.addTicket(adultTicket);
